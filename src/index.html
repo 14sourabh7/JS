@@ -8,27 +8,18 @@
   </head>
   <body>
     <script>
-      // Setup
-      function phoneticLookup(val) {
-        let result = "";
-
+      function checkObj(obj, checkProp) {
         // Only change code below this line
-        var lookup = {
-          alpha: "Adams",
-          bravo: "Boston",
-          charlie: "Chicago",
-          delta: "Denver",
-          echo: "Easy",
-          foxtrot: "Frank",
-        };
-        result = lookup[val];
-
+        if (obj.hasOwnProperty(checkProp)) {
+          return obj[checkProp];
+        } else {
+          return "Not Found";
+        }
         // Only change code above this line
-        return result;
       }
-
-      phoneticLookup("charlie");
-      console.log(phoneticLookup("charlie"));
+      console.log(
+        checkObj({ gift: "pony", pet: "kitten", bed: "sleigh" }, "gift")
+      );
     </script>
   </body>
 </html>
