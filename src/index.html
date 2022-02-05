@@ -8,10 +8,27 @@
   </head>
   <body>
     <script>
-      function timesFive(param) {
-        return param * 5;
+      // Declare the myGlobal variable below this line
+      const myGlobal = 10;
+
+      function fun1() {
+        // Assign 5 to oopsGlobal Here
+        oopsGlobal = 5;
       }
-      console.log(timesFive(34));
+      oopsGlobal = 5;
+      // Only change code above this line
+
+      function fun2() {
+        var output = "";
+        if (typeof myGlobal != "undefined") {
+          output += "myGlobal: " + myGlobal;
+        }
+        if (typeof oopsGlobal != "undefined") {
+          output += " oopsGlobal: " + oopsGlobal;
+        }
+        console.log(output);
+      }
+      fun2();
     </script>
   </body>
 </html>
